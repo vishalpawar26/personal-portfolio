@@ -1,12 +1,14 @@
-import Header from "@/sections/Header";
+"use client";
+
+import MouseFollower from "@/components/MouseFollower";
+import Hero from "@/sections/Hero";
 
 export default function Home() {
   return (
-    <div className="min-w-80">
-      <Header />
-      <div className="h-screen">
-        <h1 className="text-3xl font-bold text-white">Blurred Background</h1>
-      </div>
-    </div>
+    <main className="min-w-80">
+      <MouseFollower />
+      <Hero />
+      <div className="h-screen"></div>
+    </main>
   );
 }

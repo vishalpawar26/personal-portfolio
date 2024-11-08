@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-2 my-2 flex justify-between bg-black/50 px-8 py-2 backdrop-blur-xl">
+    <section className="bg-background/50 sticky top-2 z-40 m-2 flex min-w-80 justify-between rounded-full px-6 py-2 backdrop-blur-xl">
       <Link href="/" className="p-2">
         <Image src={logo} alt="Logo" width={24} />
       </Link>
@@ -43,7 +43,7 @@ const Header = () => {
             <Image src={menu} alt="Menu" width={26} />
           </button>
           <div
-            className={`absolute right-10 top-[60px] z-10 transform rounded-2xl border border-neutral-700 bg-neutral-900 p-2 transition-all duration-300 ease-in-out ${
+            className={`absolute right-8 top-[60px] z-10 transform rounded-2xl border border-neutral-700 bg-neutral-900 p-2 transition-all duration-300 ease-in-out ${
               isMenuOpen
                 ? "scale-100 opacity-100"
                 : "pointer-events-none scale-95 opacity-0"
@@ -86,7 +86,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>
+    </section>
   );
 };
 
