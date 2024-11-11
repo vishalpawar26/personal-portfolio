@@ -43,7 +43,7 @@ export default function MouseFollower() {
   useEffect(() => {
     if (followerRef.current) {
       gsap.to(followerRef.current, {
-        scale: isHovered ? 8 : 1,
+        scale: isHovered ? 7 : 1,
         duration: 0.5,
         ease: "power2.out",
       });
@@ -55,7 +55,7 @@ export default function MouseFollower() {
   return (
     <div
       ref={followerRef}
-      className={`pointer-events-none fixed z-50 rounded-full transition-colors ${isHovered ? "bg-white/30 backdrop-blur-[2px]" : "bg-white"} flex items-center justify-center`}
+      className={`pointer-events-none fixed z-50 rounded-full transition-colors ${isHovered ? "bg-white/25 backdrop-blur-[2px]" : "bg-white/25"} flex items-center justify-center`}
       style={{
         transform: "translate(-50%, -50%)",
         top: 0,
