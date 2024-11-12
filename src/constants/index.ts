@@ -4,10 +4,6 @@ export const navlinks = [
     link: "#projects",
   },
   {
-    lable: "About me",
-    link: "#about",
-  },
-  {
     lable: "Contact",
     link: "#contact",
   },

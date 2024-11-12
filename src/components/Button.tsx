@@ -1,5 +1,5 @@
 import React, { MutableRefObject } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface BaseButtonProps {
   label: string;
@@ -9,7 +9,7 @@ interface BaseButtonProps {
 }
 interface IconButtonProps extends BaseButtonProps {
   icon: true;
-  buttonIcon: any;
+  buttonIcon: string | StaticImageData;
 }
 
 interface NoIconButtonProps extends BaseButtonProps {

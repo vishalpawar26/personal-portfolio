@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useRef } from "react";
-import Spotlight from "@/components/Spotlight";
 import Image from "next/image";
+
+import Spotlight from "@/components/Spotlight";
 
 import nextjs from "@public/icons/nextjs-13.svg";
 import mern from "@public/icons/mern.svg";

@@ -1,9 +1,7 @@
-"use client";
-
-import Button from "@/components/Button";
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 
+import Button from "@/components/Button";
 import arrowRightUp from "@public/icons/arrow-right-up.svg";
 
 const Hero = () => {
@@ -12,33 +10,39 @@ const Hero = () => {
   const buttonRef = useRef(null);
   const imageRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const timeline = gsap.timeline();
+  useLayoutEffect(() => {
+    if (typeof window !== "undefined") {
+      const ctx = gsap.context(() => {
+        const timeline = gsap.timeline();
 
-    timeline
-      .fromTo(
-        imageRef.current,
-        { opacity: 0, y: 30 },
-        { opacity: 0.5, y: 0, duration: 0.75, ease: "power3.out" },
-      )
-      .fromTo(
-        titleRef.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.75, ease: "power3.out" },
-        "-=0.5",
-      )
-      .fromTo(
-        subtitleRef.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.75, ease: "power3.out" },
-        "-=0.5",
-      )
-      .fromTo(
-        buttonRef.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.75, ease: "power3.out" },
-        "-=0.5",
-      );
+        timeline
+          .fromTo(
+            imageRef.current,
+            { opacity: 0, y: 30 },
+            { opacity: 0.5, y: 0, duration: 0.75, ease: "power3.out" },
+          )
+          .fromTo(
+            titleRef.current,
+            { opacity: 0, y: 30 },
+            { opacity: 1, y: 0, duration: 0.75, ease: "power3.out" },
+            "-=0.5",
+          )
+          .fromTo(
+            subtitleRef.current,
+            { opacity: 0, y: 30 },
+            { opacity: 1, y: 0, duration: 0.75, ease: "power3.out" },
+            "-=0.5",
+          )
+          .fromTo(
+            buttonRef.current,
+            { opacity: 0, y: 30 },
+            { opacity: 1, y: 0, duration: 0.75, ease: "power3.out" },
+            "-=0.5",
+          );
+      });
+
+      return () => ctx.revert();
+    }
   }, []);
 
   return (

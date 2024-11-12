@@ -9,19 +9,28 @@ import menu from "@public/icons/menu.svg";
 import linkedin from "@public/icons/linkedin.svg";
 import github from "@public/icons/github.svg";
 import { navlinks, urls } from "@/constants";
+import AboutMeCard from "@/components/AboutMeCard";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAboutMeCardOpen, setIsAboutMeCardOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
+  const showAboutMeCard = () => {
+    setIsAboutMeCardOpen((prev) => !prev);
+  };
+
   return (
     <section className="bg-background/50 sticky top-2 z-40 m-2 flex min-w-80 justify-between rounded-full px-6 py-2 backdrop-blur-xl">
+      {/* Logo */}
       <Link href="/" className="p-2">
         <Image src={logo} alt="Logo" width={24} />
       </Link>
+
+      {/* Navbar */}
       <div className="flex items-center gap-2">
         <nav className="hidden md:block">
           <ul className="flex gap-2 font-medium">
@@ -33,8 +42,16 @@ const Header = () => {
                 <Link href={link}>{lable}</Link>
               </li>
             ))}
+            <button
+              onClick={showAboutMeCard}
+              className="rounded-lg px-4 py-2 text-base transition-colors duration-200 hover:bg-white/15"
+            >
+              About me
+            </button>
           </ul>
         </nav>
+
+        {/* Menu */}
         <div>
           <button
             onClick={toggleMenu}
@@ -58,6 +75,12 @@ const Header = () => {
                   <Link href={link}>{lable}</Link>
                 </li>
               ))}
+              <button
+                onClick={showAboutMeCard}
+                className="rounded-lg px-4 py-2 text-left text-base transition-colors duration-200 hover:bg-white/15"
+              >
+                About me
+              </button>
             </ul>
             <div className="mt-2 flex items-center justify-between gap-12 border-t border-neutral-700 px-4 pb-2 pt-3 text-sm text-white/50">
               <span>Follow me at</span>
