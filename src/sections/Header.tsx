@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 
 import logo from "@public/icons/logo.svg";
 import menu from "@public/icons/menu.svg";

@@ -6,7 +6,6 @@ import MouseFollower from "@/components/MouseFollower";
 import BentoGrid from "@/sections/BentoGrid";
 import Hero from "@/sections/Hero";
 import MockupCards from "@/sections/MockupCards";
-import useStore from "@/store/store";
 
 export default function Home() {
   return (

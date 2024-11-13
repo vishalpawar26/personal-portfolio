@@ -64,6 +64,7 @@ const ContactForm = () => {
       }
     } catch (error) {
       setNotification("Internal server error");
+      console.log(error);
     } finally {
       setIsProcessing(false);
       setTimeout(() => setNotification(null), 5000);
@@ -136,7 +137,7 @@ const ContactForm = () => {
 
         {/* Email Option */}
         <p className="mb-2 text-center text-xs text-neutral-400">
-          Don't like forms?{" "}
+          Do not like forms?{" "}
           <Link
             href="mailto:vishalpawar1784@gmail.com"
             target="_blank"

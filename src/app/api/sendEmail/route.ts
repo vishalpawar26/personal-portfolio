@@ -1,4 +1,3 @@
-import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
@@ -36,6 +35,7 @@ export async function POST(request: Request) {
         { status: 200 },
       );
     } catch (error) {
+      console.log(error);
       return Response.json({ message: "Error sending email" }, { status: 500 });
     }
   } else {

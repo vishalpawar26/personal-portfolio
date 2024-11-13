@@ -46,7 +46,7 @@ const AboutMeCard = () => {
         {/* About Section */}
         <div className="flex flex-col gap-2">
           <p className="text-neutral-400">
-            Hi, I'm Vishal Pawar, full-stack developer with a strong foundation
+            Hi, I am Vishal Pawar, full-stack developer with a strong foundation
             in Next.js, TypeScript, Tailwind CSS, MongoDB, and a passion for
             game development.
           </p>
