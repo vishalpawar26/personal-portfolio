@@ -1,7 +1,8 @@
 import React, { useLayoutEffect, useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import gsap from "gsap";
 
-import Button from "@/components/Button";
 import arrowRightUp from "@public/icons/arrow-right-up.svg";
 
 const Hero = () => {
@@ -57,14 +58,20 @@ const Hero = () => {
         Full-Stack Developer and Indie Game Developer, <br /> passionate about
         creating beautiful, intuitive digital spaces.
       </h3>
-      <Button
+      <Link
         ref={buttonRef}
-        label="Download Resume"
-        variant="filled"
-        icon={true}
-        buttonIcon={arrowRightUp}
-        onClick={() => {}}
-      />
+        href="./resume/Vishal_Pawar_Resume.pdf"
+        target="_blank"
+        className="group flex w-fit gap-4 rounded-full border border-neutral-700 bg-neutral-900 px-8 py-3 opacity-0 transition-colors duration-500 hover:border-blue-600 hover:bg-blue-600"
+      >
+        Download Resume
+        <Image
+          src={arrowRightUp}
+          alt="arrow"
+          width={24}
+          className="transition-transform duration-500 group-hover:translate-x-1"
+        />
+      </Link>
     </section>
   );
 };

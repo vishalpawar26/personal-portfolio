@@ -9,18 +9,24 @@ import menu from "@public/icons/menu.svg";
 import linkedin from "@public/icons/linkedin.svg";
 import github from "@public/icons/github.svg";
 import { navlinks, urls } from "@/constants";
-import AboutMeCard from "@/components/AboutMeCard";
+import useStore from "@/store/store";
+import HeaderButton from "@/components/HeaderButton";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAboutMeCardOpen, setIsAboutMeCardOpen] = useState(false);
+  const { isMenuOpen, setIsMenuOpen } = useStore();
+  const { setIsAboutMeCardOpen } = useStore();
+  const { setIsContactFormOpen } = useStore();
 
   const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
+    setIsMenuOpen();
   };
 
   const showAboutMeCard = () => {
-    setIsAboutMeCardOpen((prev) => !prev);
+    setIsAboutMeCardOpen();
+  };
+
+  const showContactForm = () => {
+    setIsContactFormOpen();
   };
 
   return (
@@ -42,12 +48,8 @@ const Header = () => {
                 <Link href={link}>{lable}</Link>
               </li>
             ))}
-            <button
-              onClick={showAboutMeCard}
-              className="rounded-lg px-4 py-2 text-base transition-colors duration-200 hover:bg-white/15"
-            >
-              About me
-            </button>
+            <HeaderButton label="About me" onClick={showAboutMeCard} />
+            <HeaderButton label="Contact" onClick={showContactForm} />
           </ul>
         </nav>
 
@@ -75,12 +77,8 @@ const Header = () => {
                   <Link href={link}>{lable}</Link>
                 </li>
               ))}
-              <button
-                onClick={showAboutMeCard}
-                className="rounded-lg px-4 py-2 text-left text-base transition-colors duration-200 hover:bg-white/15"
-              >
-                About me
-              </button>
+              <HeaderButton label="About me" onClick={showAboutMeCard} />
+              <HeaderButton label="Contact" onClick={showContactForm} />
             </ul>
             <div className="mt-2 flex items-center justify-between gap-12 border-t border-neutral-700 px-4 pb-2 pt-3 text-sm text-white/50">
               <span>Follow me at</span>

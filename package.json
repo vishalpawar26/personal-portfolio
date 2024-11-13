@@ -11,12 +11,15 @@
   "dependencies": {
     "gsap": "^3.12.5",
     "next": "15.0.2",
+    "nodemailer": "^6.9.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.53.2",
     "zustand": "^5.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.16",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
