@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import clsx from "clsx";
 
@@ -6,6 +6,7 @@ import useStore from "@/store/store";
 import ProjectDetails from "@/components/ProjectDetails";
 
 import { projects, ProjectType } from "@/constants/projects";
+import { useViewportAnimation } from "@/utils/useViewportAnimation";
 
 const Projects = () => {
   const { setIsProjectCardOpen, isProjectCardOpen } = useStore();
@@ -14,10 +15,18 @@ const Projects = () => {
     null,
   );
 
+  const webWeaverRef = useRef<HTMLButtonElement>(null);
+  const psychoCodersRef = useRef<HTMLButtonElement>(null);
+  const anonNotesRef = useRef<HTMLButtonElement>(null);
+
+  const refArray = [webWeaverRef, psychoCodersRef, anonNotesRef];
+
   const handleProjectClick = (project: ProjectType): void => {
     setSelectedProject(project);
     setIsProjectCardOpen();
   };
+
+  useViewportAnimation([webWeaverRef, psychoCodersRef, anonNotesRef]);
 
   return (
     <section
@@ -31,8 +40,9 @@ const Projects = () => {
         </h2>
 
         <div className="grid grid-rows-3 gap-12 lg:grid-cols-2 lg:grid-rows-2 lg:gap-8">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <button
+              ref={refArray[index]}
               key={project.heading}
               onClick={() => handleProjectClick(project)}
             >
