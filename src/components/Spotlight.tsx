@@ -33,8 +33,8 @@ const Spotlight = () => {
       className={`pointer-events-none fixed inset-0 transform ${isHovered ? "opacity-100" : "opacity-0"} z-10 transition-all duration-500`}
       style={{
         background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, 
-            rgba(255,255,255,0.025), 
-            rgba(255,255,255,0) 60%)`,
+            rgba(255,255,255,0.01), 
+            rgba(255,255,255,0) 75%)`,
         top: 0,
         left: 0,
       }}

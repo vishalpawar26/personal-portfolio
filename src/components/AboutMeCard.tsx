@@ -5,8 +5,8 @@ import arrowRightUp from "@public/icons/arrow-right-up.svg";
 import vishalPawar from "@public/images/Vishal-Pawar.webp";
 
 import useStore from "@/store/store";
-import Link from "next/link";
 import CloseButton from "./CloseButton";
+import LinkButton from "./LinkButton";
 
 const AboutMeCard = () => {
   const { isAboutMeCardOpen, setIsAboutMeCardOpen } = useStore();
@@ -25,7 +25,7 @@ const AboutMeCard = () => {
 
   return (
     <div
-      className={`fixed inset-0 top-0 flex h-full w-full min-w-80 items-center justify-center bg-neutral-900/50 p-4 backdrop-blur-xl ${isAboutMeCardOpen ? "z-40 opacity-100" : "opacity-0"} transition-all duration-300`}
+      className={`fixed inset-0 top-0 flex h-full w-full min-w-80 items-center justify-center bg-neutral-900/50 p-4 backdrop-blur-xl ${isAboutMeCardOpen ? "pointer-events-auto z-40 opacity-100" : "pointer-events-none opacity-0"} transition-all duration-300`}
     >
       <div className="flex w-full flex-col gap-6 rounded-3xl bg-background p-6 shadow-2xl sm:w-[32rem] sm:p-8">
         <div className="flex items-start justify-between">
@@ -59,19 +59,13 @@ const AboutMeCard = () => {
         </div>
 
         {/* Get resume button */}
-        <Link
+        <LinkButton
+          label="Download Resume"
           href="./resume/Vishal_Pawar_Resume.pdf"
-          target="_blank"
-          className="group flex w-fit gap-4 rounded-full border border-neutral-700 bg-neutral-900 px-8 py-3 transition-colors duration-500 hover:border-blue-600 hover:bg-blue-600"
-        >
-          Download Resume
-          <Image
-            src={arrowRightUp}
-            alt="arrow"
-            width={24}
-            className="transition-transform duration-500 group-hover:translate-x-1"
-          />
-        </Link>
+          imgSrc={arrowRightUp}
+          imgAlt="arrow"
+          imgWidth={24}
+        />
       </div>
     </div>
   );

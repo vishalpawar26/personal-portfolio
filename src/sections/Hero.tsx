@@ -1,9 +1,8 @@
 import React, { useLayoutEffect, useRef } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import gsap from "gsap";
 
 import arrowRightUp from "@public/icons/arrow-right-up.svg";
+import LinkButton from "@/components/LinkButton";
 
 const Hero = () => {
   const titleRef = useRef<HTMLDivElement>(null);
@@ -51,27 +50,24 @@ const Hero = () => {
       <h1 ref={titleRef} className="text-6xl font-light opacity-0 sm:text-8xl">
         Vishal Pawar
       </h1>
-      <h3
+      <h2
         ref={subtitleRef}
         className="text-base font-light text-neutral-400 opacity-0 sm:text-xl"
       >
         Full-Stack Developer and Indie Game Developer, <br /> passionate about
         creating beautiful, intuitive digital spaces.
-      </h3>
-      <Link
-        ref={buttonRef}
-        href="./resume/Vishal_Pawar_Resume.pdf"
-        target="_blank"
-        className="group flex w-fit gap-4 rounded-full border border-neutral-700 bg-neutral-900 px-8 py-3 opacity-0 transition-colors duration-500 hover:border-blue-600 hover:bg-blue-600"
-      >
-        Download Resume
-        <Image
-          src={arrowRightUp}
-          alt="arrow"
-          width={24}
-          className="transition-transform duration-500 group-hover:translate-x-1"
+      </h2>
+
+      {/* Download Button */}
+      <div ref={buttonRef} className="opacity-0">
+        <LinkButton
+          label="Download Resume"
+          href="./resume/Vishal_Pawar_Resume.pdf"
+          imgSrc={arrowRightUp}
+          imgAlt="arrow"
+          imgWidth={24}
         />
-      </Link>
+      </div>
     </section>
   );
 };

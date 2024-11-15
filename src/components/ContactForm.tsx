@@ -75,10 +75,10 @@ const ContactForm = () => {
     setIsContactFormOpen();
   };
 
-  if (!isContactFormOpen) return null;
-
   return (
-    <div className="fixed inset-0 top-0 z-40 flex h-full w-full min-w-80 items-center justify-center bg-neutral-900/50 p-4 backdrop-blur-xl">
+    <div
+      className={`fixed inset-0 top-0 flex h-full w-full min-w-80 items-center justify-center bg-neutral-900/50 p-4 backdrop-blur-xl ${isContactFormOpen ? "pointer-events-auto z-40 opacity-100" : "pointer-events-none opacity-0"} transition-all duration-500`}
+    >
       {/* Notification */}
       {notification && (
         <div className="absolute bottom-8 right-8 rounded-xl border border-neutral-700 bg-neutral-800 px-6 py-4 opacity-100 transition-opacity duration-300">

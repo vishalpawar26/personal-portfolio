@@ -38,8 +38,8 @@ const Header = () => {
 
       {/* Navbar */}
       <div className="flex items-center gap-2">
-        <nav className="hidden md:block">
-          <ul className="flex gap-2 font-medium">
+        <nav className="hidden md:flex md:gap-2">
+          <ul className="font-medium">
             {navlinks.map(({ lable, link }) => (
               <li
                 key={lable}
@@ -48,9 +48,9 @@ const Header = () => {
                 <Link href={link}>{lable}</Link>
               </li>
             ))}
-            <HeaderButton label="About me" onClick={showAboutMeCard} />
-            <HeaderButton label="Contact" onClick={showContactForm} />
           </ul>
+          <HeaderButton label="About me" onClick={showAboutMeCard} />
+          <HeaderButton label="Contact" onClick={showContactForm} />
         </nav>
 
         {/* Menu */}
@@ -62,7 +62,7 @@ const Header = () => {
             <Image src={menu} alt="Menu" width={26} />
           </button>
           <div
-            className={`absolute right-8 top-[60px] z-10 transform rounded-2xl border border-neutral-700 bg-neutral-900 p-2 transition-all duration-300 ease-in-out ${
+            className={`absolute right-8 top-[60px] z-10 flex transform flex-col rounded-2xl border border-neutral-700 bg-neutral-900 p-2 transition-all duration-300 ease-in-out ${
               isMenuOpen
                 ? "scale-100 opacity-100"
                 : "pointer-events-none scale-95 opacity-0"
@@ -77,9 +77,9 @@ const Header = () => {
                   <Link href={link}>{lable}</Link>
                 </li>
               ))}
-              <HeaderButton label="About me" onClick={showAboutMeCard} />
-              <HeaderButton label="Contact" onClick={showContactForm} />
             </ul>
+            <HeaderButton label="About me" onClick={showAboutMeCard} />
+            <HeaderButton label="Contact" onClick={showContactForm} />
             <div className="mt-2 flex items-center justify-between gap-12 border-t border-neutral-700 px-4 pb-2 pt-3 text-sm text-white/50">
               <span>Follow me at</span>
               <div className="flex items-center justify-center gap-1">
