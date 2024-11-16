@@ -45,6 +45,7 @@ const Projects = () => {
               ref={refArray[index]}
               key={project.heading}
               onClick={() => handleProjectClick(project)}
+              className="opacity-0"
             >
               <div
                 className={clsx(

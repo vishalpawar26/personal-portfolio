@@ -41,6 +41,8 @@ export type ProjectType = {
   carouselData: CarouselItem[];
   gradient: string;
   liveURL: string;
+  year: number;
+  technologies: string;
 };
 
 export const projects: ProjectType[] = [
@@ -60,8 +62,11 @@ export const projects: ProjectType[] = [
       { imgSrc: wwm5, imgAlt: "wwm5", imgDesc: "Choose a domain" },
       { imgSrc: wwm6, imgAlt: "wwm6", imgDesc: "Publish it!" },
     ],
-    gradient: "bg-gradient-to-bl from-neutral-600/40 to-neutral-800/40",
+    gradient: "bg-gradient-to-bl from-neutral-700 to-neutral-900",
     liveURL: "https://web-weaver-psi.vercel.app/",
+    year: 2024,
+    technologies:
+      "Next.js, Tailwind CSS, Aceternity UI, TypeScript, MongoDB, Clerk, Cloudinary, Zustand, Prisma",
   },
   {
     heading: "PsychoCoders",
@@ -80,6 +85,8 @@ export const projects: ProjectType[] = [
     ],
     gradient: "bg-gradient-to-bl from-green-500/40 to-yellow-600/40",
     liveURL: "https://psychocoders.vercel.app/",
+    year: 2024,
+    technologies: "React.js, Tailwind CSS, Node.js, MongoDB, Express.js",
   },
   {
     heading: "AnonNotes",
@@ -96,7 +103,10 @@ export const projects: ProjectType[] = [
       { imgSrc: aam4, imgAlt: "aam4", imgDesc: "Your public page" },
       { imgSrc: aam5, imgAlt: "aam5", imgDesc: "Receive messages" },
     ],
-    gradient: "bg-gradient-to-bl from-emerald-400/40  to-teal-200/40",
+    gradient: "bg-gradient-to-bl from-slate-700 to-gray-900",
     liveURL: "https://anonnotes.vercel.app/",
+    year: 2024,
+    technologies:
+      "Next.js, Tailwind CSS, shadcn/ui, TypeScript, MongoDB, NodeMailer",
   },
 ];
