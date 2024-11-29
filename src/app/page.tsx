@@ -6,7 +6,6 @@ import MouseFollower from "@/components/MouseFollower";
 import BentoGrid from "@/sections/BentoGrid";
 import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
-import MockupCards from "@/sections/MockupCards";
 import Projects from "@/sections/Projects";
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <AboutMeCard />
       <ContactForm />
       <Hero />
-      <MockupCards />
       <BentoGrid />
       <Projects />
       <Footer />

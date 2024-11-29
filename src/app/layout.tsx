@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/sections/Header";
 
-const interTight = Inter_Tight({
+const outfit = Outfit({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${interTight.className} antialiased`}>
+      <body className={`${outfit.className} antialiased`}>
         <Header />
         {children}
       </body>

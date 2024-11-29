@@ -30,7 +30,7 @@ const BentoGrid = () => {
   ]);
 
   return (
-    <section className="spotlight-grid flex w-full items-center justify-center px-4 py-12 sm:px-12">
+    <section className="spotlight-grid z-10 flex w-full items-center justify-center bg-background px-4 py-12 sm:px-12">
       <div className="flex flex-col gap-8 lg:w-[1200px]">
         <Spotlight />
         <div className="flex w-full flex-col gap-8 md:flex-row">
@@ -91,7 +91,7 @@ const BentoGrid = () => {
             <h3 className="text-xl font-medium sm:text-2xl md:text-3xl">
               Clean and Efficient Code.
             </h3>
-            <div className="-mb-16 -mr-16 flex">
+            <div className="-mb-16 -mr-16">
               <Image
                 src={cleanCode}
                 alt="Simple and efficient code"

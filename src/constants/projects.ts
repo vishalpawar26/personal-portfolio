@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 import webWeaverOne from "@public/images/web-weaver.webp";
-import webWeaverTwo from "@public/mockups/Web-Weaver-2.webp";
+import webWeaverTwo from "@public/mockups/web-weaver/Web-Weaver-2.webp";
 import wwm1 from "@public/mockups/web-weaver/wwm-1.webp";
 import wwm2 from "@public/mockups/web-weaver/wwm-2.webp";
 import wwm3 from "@public/mockups/web-weaver/wwm-3.webp";
@@ -41,6 +41,7 @@ export type ProjectType = {
   carouselData: CarouselItem[];
   gradient: string;
   liveURL: string;
+  githubURL: string;
   year: number;
   technologies: string;
 };
@@ -62,8 +63,9 @@ export const projects: ProjectType[] = [
       { imgSrc: wwm5, imgAlt: "wwm5", imgDesc: "Choose a domain" },
       { imgSrc: wwm6, imgAlt: "wwm6", imgDesc: "Publish it!" },
     ],
-    gradient: "bg-gradient-to-bl from-neutral-700 to-neutral-900",
+    gradient: "bg-gradient-to-bl from-neutral-600 to-neutral-800",
     liveURL: "https://web-weaver-psi.vercel.app/",
+    githubURL: "https://github.com/Neel3301/Web-Weaver",
     year: 2024,
     technologies:
       "Next.js, Tailwind CSS, Aceternity UI, TypeScript, MongoDB, Clerk, Cloudinary, Zustand, Prisma",
@@ -85,6 +87,7 @@ export const projects: ProjectType[] = [
     ],
     gradient: "bg-gradient-to-bl from-green-500/40 to-yellow-600/40",
     liveURL: "https://psychocoders.vercel.app/",
+    githubURL: "https://github.com/vishalpawar26/PsychoCoders",
     year: 2024,
     technologies: "React.js, Tailwind CSS, Node.js, MongoDB, Express.js",
   },
@@ -105,6 +108,7 @@ export const projects: ProjectType[] = [
     ],
     gradient: "bg-gradient-to-bl from-slate-700 to-gray-900",
     liveURL: "https://anonnotes.vercel.app/",
+    githubURL: "https://github.com/vishalpawar26/anonnotes",
     year: 2024,
     technologies:
       "Next.js, Tailwind CSS, shadcn/ui, TypeScript, MongoDB, NodeMailer",

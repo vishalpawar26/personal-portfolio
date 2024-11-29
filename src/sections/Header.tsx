@@ -76,7 +76,7 @@ const Header = () => {
         </nav>
 
         {/* Menu */}
-        <div>
+        <div ref={menuRef}>
           <button
             onClick={toggleMenu}
             className="rounded-lg p-2 text-2xl transition-colors duration-150 hover:bg-white/15"
@@ -84,7 +84,6 @@ const Header = () => {
             <Image src={menu} alt="Menu" width={26} />
           </button>
           <div
-            ref={menuRef}
             className={`absolute right-8 top-[60px] z-10 flex transform flex-col rounded-2xl border border-neutral-700 bg-neutral-900 p-2 transition-all duration-300 ease-in-out ${
               isMenuOpen
                 ? "scale-100 opacity-100"

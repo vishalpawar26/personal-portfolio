@@ -9,8 +9,8 @@ const config: Config = {
   ],
   safelist: [
     "bg-gradient-to-bl",
-    "from-neutral-700",
-    "to-neutral-900",
+    "from-neutral-600",
+    "to-neutral-800",
     "from-slate-700",
     "to-gray-900",
     "from-green-500/40",

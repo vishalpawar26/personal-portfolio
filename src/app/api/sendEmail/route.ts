@@ -1,14 +1,7 @@
 import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
-  console.log("asdfadfafadfsdaf", request.method);
   if (request.method === "POST") {
-    console.log(
-      "HEHHEHHEHHEEHHEHEEE",
-      process.env.EMAIL,
-      process.env.APP_PASSWORD,
-    );
-
     const { fullName, email, subject, message } = await request.json();
 
     const transporter = nodemailer.createTransport({

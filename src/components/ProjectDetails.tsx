@@ -17,8 +17,23 @@ interface ProjectDetailsProps {
 const ProjectDetails = ({ project, isVisible }: ProjectDetailsProps) => {
   const { isProjectCardOpen, setIsProjectCardOpen } = useStore();
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const cardRef = useRef<HTMLDivElement | null>(null);
+
+  const closeProjectCard = () => {
+    if (isProjectCardOpen) {
+      setIsProjectCardOpen();
+    }
+  };
+
+  const handleClickOutside = () => {
+    if (cardRef.current && !cardRef.current.contains(event?.target as Node)) {
+      closeProjectCard();
+    }
+  };
 
   useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
     if (isProjectCardOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -27,6 +42,7 @@ const ProjectDetails = ({ project, isVisible }: ProjectDetailsProps) => {
 
     return () => {
       document.body.style.overflow = "unset";
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isProjectCardOpen]);
 
@@ -45,7 +61,10 @@ const ProjectDetails = ({ project, isVisible }: ProjectDetailsProps) => {
           : "pointer-events-none opacity-0"
       }`}
     >
-      <div className="relative w-full rounded-t-3xl bg-background p-4 pb-12 md:w-[1000px] md:p-16">
+      <div
+        ref={cardRef}
+        className="relative w-full rounded-t-3xl bg-background p-4 pb-12 md:w-[1000px] md:p-16"
+      >
         {/* Close Button */}
         <div className="flex justify-end md:-mr-8 md:-mt-8">
           <CloseButton onClick={() => setIsProjectCardOpen()} />
@@ -55,10 +74,10 @@ const ProjectDetails = ({ project, isVisible }: ProjectDetailsProps) => {
           <div className="flex flex-col items-center gap-16">
             {/* Headings */}
             <div className="flex flex-col items-center justify-center gap-6">
-              <h2 className="text-center text-3xl font-semibold sm:text-4xl md:text-5xl">
+              <h2 className="text-center text-3xl font-light sm:text-4xl md:text-5xl">
                 {project.heading}
               </h2>
-              <h3 className="text-center text-base text-neutral-400 sm:text-xl lg:w-3/4">
+              <h3 className="text-center text-base font-light text-neutral-400 sm:text-xl lg:w-3/4">
                 {project.subHeading}
               </h3>
             </div>
@@ -104,21 +123,21 @@ const ProjectDetails = ({ project, isVisible }: ProjectDetailsProps) => {
                 </p>
               </div>
               <div className="flex flex-col gap-4">
-                {/* Live Site Button */}
+                {/* Live Gihub Button */}
                 <LinkButton
-                  href={project.liveURL}
+                  href={project.githubURL}
                   imgSrc={rightChevron}
                   imgAlt="right"
-                  label="View Live Site"
+                  label="View Github"
                   imgWidth={20}
                 />
 
-                {/* Close Button */}
+                {/* Closing Window Instructions */}
                 <button
                   onClick={setIsProjectCardOpen}
-                  className="text-sm text-neutral-400 underline underline-offset-1 transition-colors hover:text-neutral-300"
+                  className="text-center text-sm text-neutral-400 underline underline-offset-1"
                 >
-                  Click X to close
+                  Click to close.
                 </button>
               </div>
             </div>

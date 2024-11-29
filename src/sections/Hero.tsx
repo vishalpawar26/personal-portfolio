@@ -1,10 +1,14 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import arrowRightUp from "@public/icons/arrow-right-up.svg";
 import LinkButton from "@/components/LinkButton";
 
 const Hero = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const subtitleRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef(null);
@@ -45,9 +49,39 @@ const Hero = () => {
     }
   }, []);
 
+  useLayoutEffect(() => {
+    const container = containerRef.current;
+
+    if (container) {
+      gsap.to(container, {
+        opacity: 0.25,
+        scale: 0.95,
+
+        scrollTrigger: {
+          trigger: container,
+          start: "top [0%]",
+          end: "bottom top",
+          scrub: true,
+          pin: true,
+        },
+      });
+    }
+
+    return () => {
+      // Cleanup ScrollTrigger instances
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
-    <section className="flex flex-1 flex-col items-center justify-center gap-6 px-4 py-20 text-center sm:px-12 sm:py-36">
-      <h1 ref={titleRef} className="text-6xl font-light opacity-0 sm:text-8xl">
+    <section
+      ref={containerRef}
+      className="flex flex-1 flex-col items-center justify-center gap-6 px-4 py-20 text-center sm:px-12 sm:py-44"
+    >
+      <h1
+        ref={titleRef}
+        className="text-6xl font-light opacity-0 sm:text-7xl md:text-8xl"
+      >
         Vishal Pawar
       </h1>
       <h2
