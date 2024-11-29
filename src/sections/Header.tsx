@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 import logo from "@public/icons/logo.svg";
 import menu from "@public/icons/menu.svg";
@@ -17,8 +17,22 @@ const Header = () => {
   const { setIsAboutMeCardOpen } = useStore();
   const { setIsContactFormOpen } = useStore();
 
+  const menuRef = useRef<HTMLDivElement>(null);
+
   const toggleMenu = () => {
     setIsMenuOpen();
+  };
+
+  const closeMenu = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen();
+    }
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+      closeMenu();
+    }
   };
 
   const showAboutMeCard = () => {
@@ -28,6 +42,14 @@ const Header = () => {
   const showContactForm = () => {
     setIsContactFormOpen();
   };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <section className="bg-background/50 sticky top-2 z-40 m-2 flex min-w-80 justify-between rounded-full px-6 py-2 backdrop-blur-xl">
@@ -62,6 +84,7 @@ const Header = () => {
             <Image src={menu} alt="Menu" width={26} />
           </button>
           <div
+            ref={menuRef}
             className={`absolute right-8 top-[60px] z-10 flex transform flex-col rounded-2xl border border-neutral-700 bg-neutral-900 p-2 transition-all duration-300 ease-in-out ${
               isMenuOpen
                 ? "scale-100 opacity-100"
@@ -94,7 +117,7 @@ const Header = () => {
                 <Link href={urls.github} target="_blank">
                   <Image
                     src={github}
-                    alt="LinkedIn"
+                    alt="GitHub"
                     width={20}
                     className="hover:bg-neutral-800"
                   />
