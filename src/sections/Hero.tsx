@@ -76,7 +76,7 @@ const Hero = () => {
   return (
     <section
       ref={containerRef}
-      className="flex flex-1 flex-col items-center justify-center gap-6 px-4 py-20 text-center sm:px-12 sm:py-44"
+      className="-mt-[58px] flex min-h-screen flex-1 flex-col items-center justify-center gap-6 px-4 text-center sm:px-12"
     >
       <h1
         ref={titleRef}

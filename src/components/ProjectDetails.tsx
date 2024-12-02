@@ -137,7 +137,7 @@ const ProjectDetails = ({ project, isVisible }: ProjectDetailsProps) => {
                   onClick={setIsProjectCardOpen}
                   className="text-center text-sm text-neutral-400 underline underline-offset-1"
                 >
-                  Click to close.
+                  Click to close
                 </button>
               </div>
             </div>

@@ -15,6 +15,7 @@ const Projects = () => {
     null,
   );
 
+  const headingRef = useRef<HTMLDivElement>(null);
   const webWeaverRef = useRef<HTMLButtonElement>(null);
   const psychoCodersRef = useRef<HTMLButtonElement>(null);
   const anonNotesRef = useRef<HTMLButtonElement>(null);
@@ -26,20 +27,25 @@ const Projects = () => {
     setIsProjectCardOpen();
   };
 
-  useViewportAnimation([webWeaverRef, psychoCodersRef, anonNotesRef]);
+  useViewportAnimation([
+    headingRef,
+    webWeaverRef,
+    psychoCodersRef,
+    anonNotesRef,
+  ]);
 
   return (
-    <section
-      id="projects"
-      className="flex w-full items-center justify-center px-4 py-20 sm:gap-24 sm:px-12"
-    >
-      <div className="flex flex-col items-center justify-center gap-20 lg:w-[1440px]">
+    <section id="projects" className="w-full px-4 py-12">
+      <div className="flex flex-col items-center justify-center gap-8 lg:w-[1440px]">
         {/* Heading */}
-        <h2 className="text-center text-4xl leading-snug sm:text-5xl md:text-6xl">
-          Shaping Concepts <br /> into Experiences
+        <h2
+          ref={headingRef}
+          className="pb-4 text-center text-4xl font-light leading-snug opacity-0 sm:py-12 sm:text-5xl md:text-6xl"
+        >
+          Highlighting <br /> My Best Work.
         </h2>
 
-        <div className="grid grid-rows-3 gap-8 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:gap-8">
+        <div className="grid grid-rows-3 gap-8 md:grid-cols-2 md:grid-rows-1 lg:grid-cols-3 lg:gap-8">
           {projects.map((project, index) => (
             <button
               ref={refArray[index]}

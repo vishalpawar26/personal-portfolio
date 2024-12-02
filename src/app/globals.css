@@ -5,6 +5,8 @@
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --gradientLight: #212121;
+  --graidentDark: #131313;
 }
 
 html {
