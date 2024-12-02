@@ -50,7 +50,7 @@ const BentoGrid = () => {
                 Turning Concepts into Code.
               </h3>
               <p className="pt-2 text-base font-light text-neutral-400">
-                I'm a passionate full-stack developer with a strong interest in
+                I am a passionate full-stack developer with a strong interest in
                 game development, dedicated to creating immersive digital
                 experiences and efficient web solutions. With expertise in both
                 front-end and back-end, I craft user-focused applications that
