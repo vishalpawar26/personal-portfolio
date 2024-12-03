@@ -35,8 +35,11 @@ const Projects = () => {
   ]);
 
   return (
-    <section id="projects" className="w-full px-4 py-12">
-      <div className="flex flex-col items-center justify-center gap-8 lg:w-[1440px]">
+    <section
+      id="projects"
+      className="flex w-full items-center justify-center px-4 py-12"
+    >
+      <div className="flex flex-col items-center justify-center gap-8 lg:w-[1200px]">
         {/* Heading */}
         <h2
           ref={headingRef}
@@ -45,7 +48,7 @@ const Projects = () => {
           Highlighting <br /> My Best Work.
         </h2>
 
-        <div className="grid grid-rows-3 gap-8 md:grid-cols-2 md:grid-rows-1 lg:grid-cols-3 lg:gap-8">
+        <div className="grid grid-cols-1 grid-rows-3 gap-6 md:grid-cols-2 md:grid-rows-2">
           {projects.map((project, index) => (
             <button
               ref={refArray[index]}
@@ -55,7 +58,7 @@ const Projects = () => {
             >
               <div
                 className={clsx(
-                  "project-card m group rounded-2xl px-[6vw] pt-[6.75vw] transition-all hover:bg-background hover:p-0 hover:shadow-2xl hover:shadow-white/10 md:px-[4vw] md:pt-[4.25vw] lg:px-[2.5vw] lg:pt-[2.75vw]",
+                  "project-card m group rounded-2xl px-[7vw] pt-[8vw] transition-all hover:bg-background hover:p-0 hover:shadow-2xl hover:shadow-white/10 md:px-[4vw] md:pt-[4.25vw]",
                   project.gradient,
                 )}
               >

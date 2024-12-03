@@ -24,6 +24,9 @@ const config: Config = {
         gradientLight: "var(--gradientLight)",
         gradientDark: "var(--graidentDark)",
       },
+      screens: {
+        "md-lg": "980px",
+      },
     },
   },
   plugins: [],

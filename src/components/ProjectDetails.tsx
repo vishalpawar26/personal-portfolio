@@ -83,7 +83,7 @@ const ProjectDetails = ({ project, isVisible }: ProjectDetailsProps) => {
             </div>
 
             {/* Image */}
-            <div className="flex items-center justify-center rounded-2xl bg-neutral-900">
+            <div className="flex items-center justify-center rounded-2xl border border-neutral-800 bg-neutral-900">
               <Image
                 src={project.imgTwoSrc}
                 alt={project.imgTwoAlt}
@@ -101,7 +101,7 @@ const ProjectDetails = ({ project, isVisible }: ProjectDetailsProps) => {
             />
 
             {/* Carousel */}
-            <div className="w-full rounded-2xl bg-neutral-900">
+            <div className="w-full rounded-2xl border border-neutral-800 bg-gradient-to-bl from-gradientDark to-gradientLight">
               <Carousel items={project.carouselData} />
             </div>
 

@@ -4,6 +4,8 @@ import AboutMeCard from "@/components/AboutMeCard";
 import ContactForm from "@/components/ContactForm";
 import MouseFollower from "@/components/MouseFollower";
 import BentoGrid from "@/sections/BentoGrid";
+import Contact from "@/sections/Contact";
+import Expertise from "@/sections/Expertise";
 import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
 import Projects from "@/sections/Projects";
@@ -17,6 +19,8 @@ export default function Home() {
       <Hero />
       <BentoGrid />
       <Projects />
+      <Expertise />
+      <Contact />
       <Footer />
     </main>
   );
