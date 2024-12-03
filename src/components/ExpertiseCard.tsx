@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from "next/image";
-import React from "react";
+import React, { RefObject } from "react";
 
 interface ExpertiseCardType {
-  ref: any;
+  ref: RefObject<HTMLDivElement>;
   icon: StaticImageData;
   title: string;
   subTitle: string;
