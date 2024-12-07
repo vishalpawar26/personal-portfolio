@@ -39,7 +39,7 @@ const BentoGrid = () => {
         </h2>
 
         {/* Bento Grid */}
-        <div className="spotlight-grid md-lg:flex-row flex flex-col gap-6">
+        <div className="spotlight-grid flex flex-col gap-6 md-lg:flex-row">
           <div className="flex w-full flex-col gap-6">
             {/* About */}
             <div
@@ -63,10 +63,10 @@ const BentoGrid = () => {
               ref={cleanCodeRef}
               className="flex h-3/5 w-full flex-col gap-6 overflow-hidden rounded-3xl border border-neutral-800 bg-gradient-to-bl from-gradientLight to-gradientDark p-px px-6 py-8 opacity-0 md:px-8 md:py-12"
             >
-              <h3 className="text-xl font-light sm:text-2xl">
+              <h3 className="sm:text-2xl= text-xl font-light">
                 Clean and Efficient Code.
               </h3>
-              <div className="md-lg:absolute md-lg:bottom-0 md-lg:-mb-0 -mb-16 -mr-16">
+              <div className="-mb-16 -mr-16 md:-mr-36">
                 <Image
                   src={cleanCode}
                   alt="Simple and efficient code"
