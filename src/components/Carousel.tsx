@@ -43,7 +43,7 @@ const Carousel: React.FC<{ items: CarouselItem[] }> = ({ items }) => {
               alt={item.imgAlt}
               className="h-auto w-auto lg:w-3/4"
             />
-            <h3 className="pb-8 text-xl font-semibold md:pb-20 md:text-2xl">
+            <h3 className="pb-8 text-xl font-light md:pb-20 md:text-2xl">
               {item.imgDesc}
             </h3>
           </div>
