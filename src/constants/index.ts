@@ -37,6 +37,10 @@ export const navlinks: navlinksType[] = [
     lable: "Projects",
     link: "#projects",
   },
+  {
+    lable: "Expertise",
+    link: "#expertise",
+  },
 ];
 
 export const urls: urlsType = {

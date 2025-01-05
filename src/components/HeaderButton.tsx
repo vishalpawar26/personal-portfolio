@@ -9,7 +9,7 @@ const HeaderButton = ({ label, onClick }: HeaderButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className="rounded-lg px-4 py-2 text-left text-base transition-colors duration-300 hover:bg-white/15"
+      className="w-full rounded-lg px-4 py-2 text-left text-base font-light transition-colors duration-300 hover:bg-white/10"
     >
       {label}
     </button>

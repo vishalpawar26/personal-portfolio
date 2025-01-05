@@ -89,7 +89,7 @@ export const projects: ProjectType[] = [
     liveURL: "https://psychocoders.vercel.app/",
     githubURL: "https://github.com/vishalpawar26/PsychoCoders",
     year: 2024,
-    technologies: "React.js, Tailwind CSS, Node.js, MongoDB, Express.js",
+    technologies: "React.js, Tailwind CSS, Node.js, Express.js, MongoDB",
   },
   {
     heading: "AnonNotes",
