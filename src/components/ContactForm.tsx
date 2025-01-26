@@ -106,7 +106,7 @@ const ContactForm = () => {
 
   return (
     <div
-      className={`fixed inset-0 top-0 flex h-full w-full min-w-80 items-center justify-center bg-neutral-900/50 p-4 backdrop-blur-lg ${isContactFormOpen ? "pointer-events-auto z-40 opacity-100" : "pointer-events-none opacity-0"} transition-all duration-500`}
+      className={`fixed inset-0 top-0 flex h-full w-full min-w-80 items-center justify-center bg-neutral-900/50 p-4 backdrop-blur-3xl ${isContactFormOpen ? "pointer-events-auto z-40 opacity-100" : "pointer-events-none opacity-0"} transition-all duration-500`}
     >
       <div ref={cardRef} className="w-full sm:w-[32rem]">
         {/* Notification */}

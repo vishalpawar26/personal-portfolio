@@ -54,14 +54,14 @@ const Hero = () => {
 
     if (container) {
       gsap.to(container, {
-        opacity: 0.25,
+        opacity: 0.1,
         scale: 0.95,
-
+        ease: "power2.out",
         scrollTrigger: {
           trigger: container,
           start: "top [0%]",
-          end: "bottom top",
-          scrub: true,
+          end: "bottom",
+          scrub: 2,
           pin: true,
         },
       });
@@ -76,7 +76,7 @@ const Hero = () => {
   return (
     <section
       ref={containerRef}
-      className="flex min-h-screen flex-col items-center justify-center gap-8 text-center"
+      className="perspective-md flex min-h-screen flex-col items-center justify-center gap-8 px-4 text-center"
     >
       <h1
         ref={titleRef}

@@ -12,7 +12,7 @@ const Contact = () => {
   useViewportAnimation([headingRef, subHeadingRef, buttonRef]);
 
   return (
-    <section className="flex w-full items-center justify-center bg-background px-4 py-12 sm:px-12">
+    <section className="flex h-full w-full items-center justify-center bg-background px-4 py-24 sm:px-12">
       <div className="flex flex-col items-center gap-4 sm:gap-8 lg:w-[1024px]">
         {/* Heading */}
         <h2
