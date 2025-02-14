@@ -54,18 +54,18 @@ const Projects = () => {
               ref={refArray[index]}
               key={project.heading}
               onClick={() => handleProjectClick(project)}
-              className="opacity-0"
+              className="project-card opacity-0"
             >
               <div
                 className={clsx(
-                  "group aspect-video overflow-hidden rounded-2xl px-8 py-8 transition-all hover:p-0 sm:px-12 sm:pt-12 md:px-16 md:pt-16 md-lg:px-12 md-lg:pt-12",
-                  project.gradient,
+                  "group aspect-video overflow-hidden rounded-2xl bg-neutral-900 px-8 py-8 transition-all hover:p-10 sm:px-12 sm:pt-12 md:px-16 md:pt-16 md-lg:px-12 md-lg:pt-12",
+                  project.hoverBgColor,
                 )}
               >
                 <Image
                   src={project.imgOneSrc}
                   alt={project.imgOneAlt}
-                  className="mt-2 rounded-t-lg transition-all group-hover:m-0 group-hover:w-full group-hover:rounded-2xl"
+                  className="mt-2 rounded-t-lg border-[6px] border-black sm:border-8"
                 />
               </div>
             </button>

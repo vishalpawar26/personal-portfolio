@@ -7,15 +7,7 @@ const config: Config = {
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  safelist: [
-    "bg-gradient-to-bl",
-    "from-neutral-600",
-    "to-neutral-800",
-    "from-slate-700",
-    "to-gray-900",
-    "from-green-500/40",
-    "to-yellow-600/40",
-  ],
+  safelist: ["hover:bg-green-600", "hover:bg-blue-600", "hover:bg-white"],
   theme: {
     extend: {
       colors: {

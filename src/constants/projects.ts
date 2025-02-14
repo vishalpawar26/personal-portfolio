@@ -39,7 +39,7 @@ export type ProjectType = {
   imgTwoSrc: StaticImageData;
   imgTwoAlt: string;
   carouselData: CarouselItem[];
-  gradient: string;
+  hoverBgColor: string;
   liveURL: string;
   githubURL: string;
   year: number;
@@ -63,7 +63,7 @@ export const projects: ProjectType[] = [
       { imgSrc: wwm5, imgAlt: "wwm5", imgDesc: "Choose a domain" },
       { imgSrc: wwm6, imgAlt: "wwm6", imgDesc: "Publish it!" },
     ],
-    gradient: "bg-gradient-to-bl from-neutral-600 to-neutral-800",
+    hoverBgColor: "hover:bg-blue-600",
     liveURL: "https://web-weaver-psi.vercel.app/",
     githubURL: "https://github.com/Neel3301/Web-Weaver",
     year: 2024,
@@ -85,7 +85,7 @@ export const projects: ProjectType[] = [
       { imgSrc: pcm4, imgAlt: "pcm4", imgDesc: "Track your progress" },
       { imgSrc: pcm5, imgAlt: "pcm5", imgDesc: "View your solutions" },
     ],
-    gradient: "bg-gradient-to-bl from-green-500/40 to-yellow-600/40",
+    hoverBgColor: "hover:bg-green-600",
     liveURL: "https://psychocoders.vercel.app/",
     githubURL: "https://github.com/vishalpawar26/PsychoCoders",
     year: 2024,
@@ -106,7 +106,7 @@ export const projects: ProjectType[] = [
       { imgSrc: aam4, imgAlt: "aam4", imgDesc: "Your public page" },
       { imgSrc: aam5, imgAlt: "aam5", imgDesc: "Receive messages" },
     ],
-    gradient: "bg-gradient-to-bl from-slate-700 to-gray-900",
+    hoverBgColor: "hover:bg-white",
     liveURL: "https://anonnotes.vercel.app/",
     githubURL: "https://github.com/vishalpawar26/anonnotes",
     year: 2024,
