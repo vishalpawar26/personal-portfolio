@@ -56,10 +56,11 @@ const Hero = () => {
       gsap.to(container, {
         opacity: 0.1,
         scale: 0.95,
+        filter: "blur(4px)",
         ease: "power2.out",
         scrollTrigger: {
           trigger: container,
-          start: "top [0%]",
+          start: "top",
           end: "bottom",
           scrub: 2,
           pin: true,

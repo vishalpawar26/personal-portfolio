@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 
+import webWeaver from "@public/mockups/web-weaver/web-weaver.webp";
 import webWeaverOne from "@public/images/web-weaver.webp";
 import webWeaverTwo from "@public/mockups/web-weaver/Web-Weaver-2.webp";
 import wwm1 from "@public/mockups/web-weaver/wwm-1.webp";
@@ -9,6 +10,7 @@ import wwm4 from "@public/mockups/web-weaver/wwm-4.webp";
 import wwm5 from "@public/mockups/web-weaver/wwm-5.webp";
 import wwm6 from "@public/mockups/web-weaver/wwm-6.webp";
 
+import psychoCoders from "@public/mockups/psychocoders/psychocoders.webp";
 import psychoCodersOne from "@public/images/psychocoders.webp";
 import psychoCodersTwo from "@public/mockups/psychocoders/psychocoders-2.webp";
 import pcm1 from "@public/mockups/psychocoders/pcm-1.webp";
@@ -17,6 +19,7 @@ import pcm3 from "@public/mockups/psychocoders/pcm-3.webp";
 import pcm4 from "@public/mockups/psychocoders/pcm-4.webp";
 import pcm5 from "@public/mockups/psychocoders/pcm-5.webp";
 
+import anonNotes from "@public/mockups/anon-notes/anon-notes.webp";
 import anonNotesOne from "@public/images/anon-notes.webp";
 import anonNotesTwo from "@public/mockups/anon-notes/anon-notes-2.webp";
 import aam1 from "@public/mockups/anon-notes/aam-1.webp";
@@ -34,6 +37,8 @@ export type CarouselItem = {
 export type ProjectType = {
   heading: string;
   subHeading: string;
+  about: string;
+  thumbnail: StaticImageData;
   imgOneSrc: StaticImageData;
   imgOneAlt: string;
   imgTwoSrc: StaticImageData;
@@ -49,8 +54,10 @@ export type ProjectType = {
 export const projects: ProjectType[] = [
   {
     heading: "Web Weaver",
-    subHeading:
+    subHeading: "No-code website builder.",
+    about:
       "Web Weaver makes website building effortless—no coding needed. Customize beautiful templates with just a few clicks. Note: The project is still in development and may not work as intended.",
+    thumbnail: webWeaver,
     imgOneSrc: webWeaverOne,
     imgOneAlt: "Web Weaver",
     imgTwoSrc: webWeaverTwo,
@@ -72,8 +79,10 @@ export const projects: ProjectType[] = [
   },
   {
     heading: "PsychoCoders",
-    subHeading:
+    subHeading: "Practice DSA.",
+    about:
       "PsychoCoders makes DSA practice engaging, with a profile dashboard to track progress and problem-solving stats by difficulty. Solve problems in C++, Java, or Python.",
+    thumbnail: psychoCoders,
     imgOneSrc: psychoCodersOne,
     imgOneAlt: "PsychoCoders",
     imgTwoSrc: psychoCodersTwo,
@@ -93,8 +102,10 @@ export const projects: ProjectType[] = [
   },
   {
     heading: "AnonNotes",
-    subHeading:
+    subHeading: "Send anonymous messages.",
+    about:
       "AnonNotes fosters anonymous, supportive communication, allowing users to send anonymous messages, questions, or notes to others. With secure storage and easy access, it ensures privacy while promoting kindness and connection.",
+    thumbnail: anonNotes,
     imgOneSrc: anonNotesOne,
     imgOneAlt: "Anon Notes",
     imgTwoSrc: anonNotesTwo,

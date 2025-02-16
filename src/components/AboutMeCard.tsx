@@ -57,7 +57,7 @@ const AboutMeCard = () => {
       className={`fixed inset-0 top-0 flex h-full w-full min-w-80 items-center justify-center bg-neutral-900/50 p-4 backdrop-blur-3xl ${isAboutMeCardOpen ? "pointer-events-auto z-40 opacity-100" : "pointer-events-none opacity-0"} transition-all duration-300`}
     >
       <div ref={cardRef}>
-        <div className="flex w-full flex-col gap-6 rounded-3xl bg-background p-6 shadow-2xl sm:w-[32rem] sm:p-8">
+        <div className="flex w-full flex-col gap-6 rounded-3xl bg-background p-6 sm:w-[32rem] sm:p-8">
           <div className="flex items-start justify-between">
             {/* Image */}
             <Image

@@ -78,7 +78,7 @@ const ProjectDetails = ({ project, isVisible }: ProjectDetailsProps) => {
                 {project.heading}
               </h2>
               <h3 className="text-center text-base font-light text-neutral-400 sm:text-xl lg:w-3/4">
-                {project.subHeading}
+                {project.about}
               </h3>
             </div>
 

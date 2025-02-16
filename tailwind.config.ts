@@ -7,7 +7,6 @@ const config: Config = {
     "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  safelist: ["hover:bg-green-600", "hover:bg-blue-600", "hover:bg-white"],
   theme: {
     extend: {
       colors: {
