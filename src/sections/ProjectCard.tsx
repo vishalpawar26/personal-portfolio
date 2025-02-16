@@ -58,7 +58,7 @@ const ProjectCard = ({
       onClick={onClick}
       className="project-card sticky top-0 overflow-hidden"
     >
-      <div className="absolute top-1/2 w-full rounded-xl bg-neutral-950/10 px-4 py-16 text-left backdrop-blur-xl sm:rounded-2xl sm:px-8 md:rounded-3xl md:px-16">
+      <div className="absolute top-1/2 w-full bg-neutral-950/10 px-4 py-16 text-left backdrop-blur-xl sm:px-8 md:px-16">
         <h2
           ref={titleRef}
           className="text-4xl font-light opacity-0 md:pb-2 lg:text-5xl"
