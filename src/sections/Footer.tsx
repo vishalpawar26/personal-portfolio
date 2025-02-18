@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="flex w-[1200px] flex-col-reverse items-center justify-between gap-2 md:flex-row md:gap-6">
         <div>
           <p className="text-sm text-neutral-400">
-            © 2024 Vishal Pawar. All rights reserved.
+            © 2025 Vishal Pawar. All rights reserved.
           </p>
         </div>
         <div className="flex gap-4">
